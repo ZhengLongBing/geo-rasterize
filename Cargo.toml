@@ -13,22 +13,22 @@ categories = ["encoding", "graphics", "rendering", "science"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-euclid = "0.22.6"
-ndarray = "0.15.3"
-geo = "0.18.0"
-thiserror = "1.0.26"
-num-traits = "0.2.14"
-itertools = "0.10.1"
+euclid = "0.22"
+ndarray = "0.16"
+geo = "0.29"
+thiserror = "1.0"
+num-traits = "0.2"
+itertools = "0.14"
 
 [dev-dependencies]
-gdal = {version = "0.11.0", features = ["array"]}
-pretty_assertions = "1.0.0"
-anyhow = "1.0.42"
-proptest = "1.0.0"
-criterion = "0.3"
-flatgeobuf = "0.6.2"  # can't actually build this without the default http feature
-geozero = {version = "0.7.7", default-features = false, features = ["with-geo"]}
-rand = "0.8.4"
+gdal = {version = "0.17", features = ["array","bindgen"]}
+pretty_assertions = "1.4"
+anyhow = "1.0"
+proptest = "1.6.0"
+criterion = "0.5"
+flatgeobuf = "4.6"  # can't actually build this without the default http feature
+geozero = {version = "0.14", default-features = false, features = ["with-geo"]}
+rand = "0.9"
 
 [[bench]]
 name = "versus-gdal"
